@@ -1,8 +1,10 @@
 tamanhoVetor = int(input())
-
-vetor = list(map(int,input().split(" "))) 
-menorNumero = vetor[0]
+vetor = input().split(" ")
+menorNumero = int(vetor[0])
+posicaoMenorNumero = 0
 for i in range(1,tamanhoVetor):   
-    if vetor[i]< menorNumero:
-        menorNumero = vetor[i]
-        
+    if int(vetor[i])< menorNumero:
+        menorNumero = int(vetor[i])
+        posicaoMenorNumero = i
+print("Menor valor: {}".format(menorNumero))
+print("Posicao: {}".format(posicaoMenorNumero))
